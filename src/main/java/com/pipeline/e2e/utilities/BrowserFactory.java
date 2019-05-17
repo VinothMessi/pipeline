@@ -4,11 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BrowserFactory {
+import com.pipeline.e2e.base.Base;
 
-	WebDriver ldriver;
-	final String projectPath = "E:\\MyPassion\\myProjects\\E2E\\";
-	String driverFilesPath = "src\\main\\resources\\drivers\\";
+public class BrowserFactory extends Base {
 
 	public WebDriver launch(String browserName) {
 		try {

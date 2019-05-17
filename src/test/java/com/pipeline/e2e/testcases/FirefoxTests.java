@@ -3,7 +3,7 @@ package com.pipeline.e2e.testcases;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.pipeline.e2e.base.BaseTest;
+import com.pipeline.e2e.testbase.BaseTest;
 
 public class FirefoxTests extends BaseTest {
 

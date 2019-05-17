@@ -1,4 +1,4 @@
-package com.pipeline.e2e.base;
+package com.pipeline.e2e.testbase;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
