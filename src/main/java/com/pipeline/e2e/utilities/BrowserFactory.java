@@ -7,22 +7,25 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BrowserFactory {
 
 	WebDriver ldriver;
+	final String projectPath = "E:\\MyPassion\\myProjects\\E2E\\";
+	String driverFilesPath = "src\\main\\resources\\drivers\\";
+	
 
 	public WebDriver launch(String browserName) {
 		try {
 			switch (browserName) {
 			case "Chrome":
 				System.setProperty("webdriver.chrome.driver",
-						"E:\\MyPassion\\myProjects\\E2E\\src\\main\\resources\\drivers\\chromedriver.exe");
+						projectPath + driverFilesPath + "chromedriver.exe");
 				ldriver = new ChromeDriver();
 				break;
 			case "Firefox":
 				System.setProperty("webdriver.gecko.driver",
-						"E:\\MyPassion\\myProjects\\E2E\\src\\main\\resources\\drivers\\geckodriver.exe");
+						projectPath + driverFilesPath + "geckodriver.exe");
 				ldriver = new FirefoxDriver();
 				break;
 			default:
-				System.out.println(browserName + ": " + "Browser type not supported");
+				System.out.println("Browser type not supported");
 			}
 		} catch (Exception e) {
 			System.out.println("Unable to launch a session of : " + browserName + "\n" + e.getMessage());
