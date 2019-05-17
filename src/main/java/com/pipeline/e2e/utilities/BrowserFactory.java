@@ -9,19 +9,16 @@ public class BrowserFactory {
 	WebDriver ldriver;
 	final String projectPath = "E:\\MyPassion\\myProjects\\E2E\\";
 	String driverFilesPath = "src\\main\\resources\\drivers\\";
-	
 
 	public WebDriver launch(String browserName) {
 		try {
 			switch (browserName) {
 			case "Chrome":
-				System.setProperty("webdriver.chrome.driver",
-						projectPath + driverFilesPath + "chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", projectPath + driverFilesPath + "chromedriver.exe");
 				ldriver = new ChromeDriver();
 				break;
 			case "Firefox":
-				System.setProperty("webdriver.gecko.driver",
-						projectPath + driverFilesPath + "geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", projectPath + driverFilesPath + "geckodriver.exe");
 				ldriver = new FirefoxDriver();
 				break;
 			default:
